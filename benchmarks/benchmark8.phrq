@@ -1,0 +1,29 @@
+#boundary_solution
+solution 100001
+units mmol/kgw
+-water 1#kg
+pH    3
+Cl 1 charge
+
+
+#solution_in_equilibrium_with_portlandite
+solution 100004
+units mmol/kgw
+-water 1#kg
+equilibrium_phases 100004
+portlandite
+save solution 100002-100003
+
+
+#equilibrium_phase_reaction
+equilibrium_phases  100003
+portlandite 0 4e-3 #amount: moles/kgwater
+
+
+
+
+
+
+
+
+

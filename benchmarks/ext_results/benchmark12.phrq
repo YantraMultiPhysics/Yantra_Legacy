@@ -1,0 +1,62 @@
+SOLUTION_MASTER_SPECIES
+[A] [A] 1 1 1
+
+SOLUTION_SPECIES
+[A] = [A]
+log_k 0
+
+SOLUTION 0
+units mmol/kgw
+pe 12.0 O2(g) -0.67
+[A] 1
+END
+
+
+SOLUTION 1-40
+END
+
+
+RATES
+[A]_decay
+-start
+10 rate = -TOT("[A]") * .00005
+20 moles = rate * TIME
+30 SAVE moles
+-end
+END
+
+
+KINETICS 1-40
+[A]_decay
+-formula [A] 1
+-m 0
+END
+
+TRANSPORT
+    -cells 40
+    -boundary_conditions   flux flux
+    -length .005
+    -flow_direction  forward
+    -shifts                100
+    -time_step             1000
+    -dispersivity         0
+    -diffusion_coef       1e-8
+    #-correct_disp    true
+    -punch_cells          40
+    -punch_frequency      1
+
+
+
+
+
+SELECTED_OUTPUT
+-file benchmark12.res
+-reset false
+USER_PUNCH
+-heading Time A
+-start
+10 punch TOTAL_TIME
+20 PUNCH TOT("[A]")*1000
+-end
+END
+

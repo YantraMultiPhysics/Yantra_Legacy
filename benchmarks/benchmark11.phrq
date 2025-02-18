@@ -1,0 +1,56 @@
+PHASES
+CSHQ_TobH
+#from Table 6
+
+ (CaO)0.66666667(SiO2)1(H2O)1.5  = 0.66666667Ca++ + 1 SiO(OH)3- + 0.33333334OH- -0.16666667 H2O
+  log_K -6.190832
+
+CSHQ_TobD
+#from Table 6
+ (CaO)0.8333333333(SiO2)0.6666666667(H2O)1.8333333333  = 0.8333333333 Ca++ + 0.6666666667 SiO(OH)3- + 0.99999999990 OH- + 0.3333333333 H2O
+  log_K -6.8995533
+
+CSHQ_JenH
+#from Table 6
+ (CaO)1.3333333333(SiO2)1(H2O)2.1666666667  = 1.3333333333 Ca++ + 1 SiO(OH)3- + 1.6666666667 OH- -0.1666666667 H2O
+  log_K -10.96765
+
+CSHQ_JenD
+#from Table 6
+ (CaO)1.5(SiO2)0.6666666667(H2O)2.5  = 1.5 Ca++ + 0.6666666667 SiO(OH)3- + 2.3333333333 OH- + 0.3333333333 H2O
+  log_K -10.47635
+
+
+#boundary_solution
+solution 100001
+units mmol/kgw
+-water 0.448230266981165#kg which is equal to porosity
+pH    7
+Cl 1 charge 
+
+
+#solution in domain with c-s-h
+Solution 100005
+-water 0.448230266981165#kg  which is equal to porosity
+-units mol/kgw
+pH 12 charge
+Ca  1.955e-002
+Si  3.018e-005
+
+solid_solutions 100005
+Tob_jen_ss
+ -comp CSHQ_TobH  0.1041
+ -comp CSHQ_TobD  2.5050
+ -comp CSHQ_JenH  2.1555
+ -comp CSHQ_JenD  3.2623
+
+
+
+knobs
+-iterations 8000
+#-tolerance 1e-17
+#-convergence_tolerance 1e-12
+
+
+
+

@@ -1,0 +1,26 @@
+Solution 100001
+ -units mmol/kgw
+ pH 7 charge
+ Ca 0.6
+ Cl 1.2
+ O(0) 1 O2(g) -0.68
+
+solution 100002
+ -units mmol/kgw
+ pH 7 charge
+ Na 1
+ K 0.2
+ N(5) 1.2
+ O(0) 1 O2(g) -0.68
+ 
+EXCHANGE 100002
+X 0.0011
+-equilibrate with solution 100002
+
+
+
+
+
+
+
+

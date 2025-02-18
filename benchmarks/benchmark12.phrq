@@ -1,0 +1,28 @@
+SOLUTION_MASTER_SPECIES
+[A] [A] 1 1 1
+
+SOLUTION_SPECIES
+[A] = [A]
+log_k 0
+
+RATES
+[A]_decay
+-start
+10 rate = -TOT("[A]") * .00005
+20 moles = rate * TIME
+30 SAVE moles
+-end
+END
+
+SOLUTION 100001
+units mmol/kgw
+pe 12.0 O2(g) -0.67
+[A] 1
+
+SOLUTION 100002
+
+KINETICS 100002 
+[A]_decay
+-formula [A] 1
+-m 0
+

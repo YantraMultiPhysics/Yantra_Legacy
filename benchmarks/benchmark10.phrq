@@ -1,0 +1,18 @@
+solution 100001
+units mmol/kgw
+-water 1#kg
+pH    7 charge  
+Na 8
+Ca 0
+
+equilibrium_phases  100001
+portlandite 0 0. #amount: moles/kgwater
+
+
+
+
+
+
+
+
+
