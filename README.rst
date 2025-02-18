@@ -23,22 +23,12 @@ Developer
 
 Ravi A. Patel
 
-Post Doctoral Researcher 
-
-Laboratory for waste Management (`LES`_)
-
-Paul sherrer institute  (`PSI`_)
-
-Villigen, Switzerland
-
-email (work): ravi-ajitbhai.patel@psi.ch
-
 email (personal): ravee.a.patel@gmail.com
 
 
 Installation
 ++++++++++++
-Currently developemental version for *Yantra* 1.0.0 is available. Therefore it advised not to install it
+Currently yantra is in developmental stage. Therefore it advised not to install it
 completely. Use following commands to build the FORTRAN extensions in place so that Yantra
 can be ran from downloaded directory
 
