@@ -1,0 +1,4 @@
+IPhreeqcPy 
+matplotlib 
+numpy 
+scipy 

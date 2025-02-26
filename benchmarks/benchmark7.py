@@ -80,7 +80,7 @@ if __name__ =='__main__':
     #%%run model
     results={}
     time=[]
-    clock=timer(units='min')
+    clock=timer()
     for name in rt.fluid.components:
         if name not in ['H','O']:
             results[name]=[]

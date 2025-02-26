@@ -30,10 +30,10 @@ Installation
 ++++++++++++
 Currently yantra is in developmental stage. Therefore it advised not to install it
 completely. Use following commands to build the FORTRAN extensions in place so that Yantra
-can be ran from downloaded directory
+can be ran from downloaded directory. At present python 3.12 and later versions are not supported.
 
-Windows
--------
+Windows(may not work anymore)
+-----------------------------
 
 - Install 64 bit python distribution. Use of Anaconda is recommended.
 
@@ -50,7 +50,9 @@ Linux (UBUNTU)
 
 - Make sure  a Fortran compiler is available and numpy, matplotlib and scipy are installed 
 
-- Install IPhreeqcPy. Follow its installation instructions.
+- Install  requirements using requirements.txt file. Run following command in terminal
+
+   *pip install -r requirements.txt*
 
 - Download Yantra version 1.0.0-dev. Unzip the folder and run following command in terminal
 	

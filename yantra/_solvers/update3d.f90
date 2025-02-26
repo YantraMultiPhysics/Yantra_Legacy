@@ -151,7 +151,7 @@ Subroutine update_non_diffusive_phases(dphase, phaseqty, nodetype, vol, mvol, to
                   !$OMP ATOMIC
                   vol (i, j, k) = vol (i, j, k) - phaseqty (p, i, j, k) * mvol(p)
                   !$OMP ATOMIC
-                  phaseqty (p, i, j, k) =  0.d0
+                  phaseqty (p, i, j, k) =  0.d0*phaseqty (p, i, j, k)
                   Do ni = 1, 6
                     nextI = ez (ni) + i
                     nextJ = ey (ni) + j

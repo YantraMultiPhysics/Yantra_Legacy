@@ -98,12 +98,12 @@ class MultilevelAdvectionDiffusion(AdvectionDiffusion, metaclass=LBMeta):
             De = self.De
         D0,poros,app_tort,cphi_fact,cphi,const_cphi,tauref,tfactbased,tfact,collision_model,d=vals
         if len(args)==3: De=(D0*poros*app_tort*np.ones(domain.shape))
-        De[De==0]=np.NaN
+        De[De==0]=np.nan
         Deref= np.nanmax(De)
         if len(args)==3: Deref= solver_params.get('Deref',Deref) 
         poros = deepcopy(poros)
         if len(args)==3: poros = poros*np.ones(domain.shape)
-        poros[poros==0]=np.NaN
+        poros[poros==0]=np.nan
         collision_model = collision_model.lower()
         if (collision_model == 'trt') and ( not const_cphi):
             cphi =  np.nanmin(poros)*cphi_fact
